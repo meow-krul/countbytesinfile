@@ -44,27 +44,27 @@ void Output(vector<int> bytes, string out){
 }
 
 int main(int args, char *argv[]){
+	
 	if(args > 3 || (args == 2 && string(argv[1]) != "--help") || args == 1){
 		cout << "use --help to get information about program";
                 return 0;
 	}
-	else if(args == 2 && string(argv[1]) == "--help"){
+	if(args == 2 && string(argv[1]) == "--help"){
 		cout << "Example :  ./my.prog FILENAME OUTPUTMETHOD" << endl;
 		cout << "Output methods : desc, ascend" << endl;
 		return 0;
 	}
-	else{
-		string output;
-                string fl;
-                output = argv[2];
-                fl = argv[1];
-                vector<char> chars = ReadAllBytes(fl);
-                vector<int> bytes;
-                for(int i = 0; i < chars.size(); i++){
-                        bytes.push_back(int(chars[i]));
-                }
-                Output(bytes, output);
-		return 0;
-	}
+	
+	string output;
+        string fl;
+        output = argv[2];
+        fl = argv[1];
+        vector<char> chars = ReadAllBytes(fl);
+        vector<int> bytes;
+        for(int i = 0; i < chars.size(); i++){
+        	bytes.push_back(int(chars[i]));
+        }
+        Output(bytes, output);
+	return 0;
 
 }
