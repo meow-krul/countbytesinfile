@@ -7,6 +7,6 @@ How to install:
 
 
 How to use:
-<br>(If you compile your own program) ./a.out FILENAME OUTPUT-TYPE(desc, ascend)
-<br>(From git folder) ./countbytesinfile.out FILENAME OUTPUT-TYPE(desc, ascend)
+<br>./a.out FILENAME OUTPUT-TYPE(desc, ascend)
+
 
